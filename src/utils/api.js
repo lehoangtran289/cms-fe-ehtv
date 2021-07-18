@@ -1,7 +1,7 @@
 import axios from "axios";
 import { API_URL } from '../config/config';
 
-export const doPost = (dispatch, url, body) => {
+export const doPost = (url, body) => {
   return fetch(API_URL + url, {
     method: "POST",
     headers: {
@@ -11,7 +11,7 @@ export const doPost = (dispatch, url, body) => {
   });
 };
 
-export const doPut = (dispatch, url, body) => {
+export const doPut = (url, body) => {
   return fetch(API_URL + url, {
     method: "PUT",
     headers: {
@@ -21,7 +21,7 @@ export const doPut = (dispatch, url, body) => {
   });
 };
 
-export const doGet = (dispatch, url) => {
+export const doGet = (url) => {
   return fetch(API_URL + url, {
     method: "GET",
     headers: {
@@ -35,7 +35,7 @@ export const doGet = (dispatch, url) => {
   );
 };
 
-export const doDelete = (dispatch, token, url) => {
+export const doDelete = (url) => {
   return fetch(API_URL + url, {
     method: "DELETE",
     headers: {
@@ -49,7 +49,7 @@ export const doDelete = (dispatch, token, url) => {
   );
 };
 
-export const axiosPost = (dispatch, url, data) => {
+export const axiosPost = (url, data) => {
   return axios.post(API_URL + url, data, {
     headers: {
       "content-type": "application/json"
@@ -57,7 +57,7 @@ export const axiosPost = (dispatch, url, data) => {
   });
 };
 
-export const axiosGet = (dispatch, url) => {
+export const axiosGet = (url) => {
   return axios.get(API_URL + url, {
     headers: {
       "content-type": "application/json"
@@ -65,7 +65,7 @@ export const axiosGet = (dispatch, url) => {
   });
 };
 
-export const axiosPut = (dispatch, url, data) => {
+export const axiosPut = (url, data) => {
   return axios.put(API_URL + url, data, {
     headers: {
       "content-type": "application/json"
