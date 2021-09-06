@@ -1,0 +1,6 @@
+version: '3'
+services:
+  appfe:
+    build: .
+    ports:
+      - "1443:3000"
