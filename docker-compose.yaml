@@ -1,6 +1,8 @@
 version: '3'
 services:
-  appfe:
+  ehtv-cms-fe:
     build: .
+    container_name: ehtv-cms-fe
+    image: ehtv-cms-fe:1.0
     ports:
-      - "1443:3000"
+      - "1444:3000"
